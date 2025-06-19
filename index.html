@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ômega Quadros</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background-color: #111;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 50px;
+    }
+    header h1 {
+      font-size: 24px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: #222;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .banner {
+      background: url('https://via.placeholder.com/1200x400?text=Quadros+Decorativos') no-repeat center;
+      background-size: cover;
+      height: 300px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .quadro {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .quadro:hover {
+      transform: scale(1.03);
+    }
+    .quadro img {
+      width: 100%;
+      height: auto;
+    }
+    .quadro h3 {
+      margin: 10px;
+    }
+    .quadro p {
+      margin: 0 10px 10px;
+    }
+    .btn {
+      display: block;
+      margin: 10px;
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      color: white;
+      margin-top: 40px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 20px;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <img src="https://via.placeholder.com/50x50?text=Ω" alt="Logo Ômega" />
+      <h1>Ômega Quadros</h1>
+    </div>
+    <p>Arte que transforma ambientes</p>
+  </header>
+
+  <nav>
+    <a href="#galeria">Galeria</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <div class="banner"></div>
+
+  <section class="container" id="galeria">
+    <div class="quadro">
+      <img src="https://via.placeholder.com/400x400?text=Quadro+1" alt="Quadro 1">
+      <h3>Quadro Abstrato</h3>
+      <p>A partir de R$ 89,90</p>
+      <a class="btn" href="#">Comprar</a>
+    </div>
+    <div class="quadro">
+      <img src="https://via.placeholder.com/400x400?text=Quadro+2" alt="Quadro 2">
+      <h3>Natureza Colorida</h3>
+      <p>A partir de R$ 129,90</p>
+      <a class="btn" href="#">Comprar</a>
+    </div>
+    <div class="quadro">
+      <img src="https://via.placeholder.com/400x400?text=Quadro+3" alt="Quadro 3">
+      <h3>Minimalista Preto & Branco</h3>
+      <p>A partir de R$ 99,90</p>
+      <a class="btn" href="#">Comprar</a>
+    </div>
+  </section>
+
+  <section id="sobre" style="padding: 40px; background: #eee;">
+    <div style="max-width: 800px; margin: auto;">
+      <h2>Sobre Nós</h2>
+      <p>
+        A Ômega Quadros nasceu da paixão pela arte e pela decoração. Criamos peças exclusivas para deixar seu ambiente mais bonito, moderno e com personalidade.
+      </p>
+    </div>
+  </section>
+
+  <section id="contato" style="padding: 40px;">
+    <div style="max-width: 800px; margin: auto;">
+      <h2>Contato</h2>
+      <form action="mailto:contato@omegaquadros.com" method="post" enctype="text/plain">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+        <input type="submit" value="Enviar" class="btn">
+      </form>
+      <p>Ou nos chame no WhatsApp: <a href="https://wa.me/5511912345678" target="_blank">(11) 91234-5678</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ômega Quadros. Todos os direitos reservados.</p>
+  </footer>
+
+  <a class="whatsapp-btn" href="https://wa.me/5511912345678" target="_blank" title="Fale conosco no WhatsApp">
+    💬
+  </a>
+</body>
+</html>
